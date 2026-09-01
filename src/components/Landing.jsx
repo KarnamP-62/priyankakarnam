@@ -268,6 +268,12 @@ function Landing() {
         </div>
       </section>
 
+      {/* Footer */}
+      <footer className="landing__footer">
+        <div className="landing__footer-line"></div>
+        <p className="landing__footer-copyright">&copy; Copyright 2026, Priyanka Karnam</p>
+      </footer>
+
     </div>
   );
 }
