@@ -13,6 +13,10 @@ import pacificYieldPdf from '../assets/Priyanka_Karnam_PacificYield.pdf';
 import layer2Pdf from '../assets/Layer2-v1.pdf';
 import ghgEmission from '../assets/GHG_Emission.png';
 import cropYieldPic from '../assets/picyeild.png';
+import padathiThumb from '../assets/padathithumbnail.jpg';
+import pattachitraThumb from '../assets/Patachithra.jpg';
+import mandalaThumb from '../assets/Mandalathumbnail.jpg';
+import tanjoreThumb from '../assets/Tanjore.jpg';
 import './Landing.css';
 
 function Landing() {
@@ -32,8 +36,40 @@ function Landing() {
   const navItems = [
     { label: 'Project', href: '#project' },
     { label: 'Poster', href: '#poster' },
-    { label: 'Arts', href: '#', comingSoon: true },
+    { label: 'Arts', href: '#arts' },
     { label: 'Resume', href: resumePdf, external: true }
+  ];
+
+  const arts = [
+    {
+      id: 1,
+      title: 'Padathi art series',
+      subtitle: 'Portrait of Indian womenhood.',
+      link: '/arts/padathi',
+      thumbnail: padathiThumb
+    },
+    {
+      id: 2,
+      title: 'Pattachitra',
+      subtitle: '',
+      link: '/arts/pattachitra',
+      thumbnail: pattachitraThumb
+    },
+    {
+      id: 3,
+      title: 'Mandala',
+      subtitle: '',
+      link: '/arts/mandala',
+      thumbnail: mandalaThumb
+    },
+    {
+      id: 4,
+      title: 'Tanjore',
+      subtitle: '',
+      link: null,
+      comingSoon: true,
+      thumbnail: tanjoreThumb
+    }
   ];
 
   const posters = [
@@ -152,12 +188,6 @@ function Landing() {
                   href={item.href}
                   className="landing__nav-link"
                   {...(item.external && { target: '_blank', rel: 'noopener noreferrer' })}
-                  {...(item.comingSoon && {
-                    onClick: (e) => {
-                      e.preventDefault();
-                      alert('Work in progress, coming soon!');
-                    }
-                  })}
                 >
                   {item.label}
                 </a>
@@ -263,6 +293,61 @@ function Landing() {
                   <p className="landing__poster-subtitle">{poster.subtitle}</p>
                 </div>
               </a>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      {/* Arts Section */}
+      <section className="landing__arts" id="arts">
+        <h2 className="landing__projects-title">Selected Arts</h2>
+        <div className="landing__arts-grid">
+          {arts.map((art) => (
+            <article key={art.id} className="landing__art-card">
+              {art.comingSoon ? (
+                <a
+                  href="#"
+                  className="landing__art-link"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    alert('Work in progress, coming soon!');
+                  }}
+                >
+                  <div className="landing__art-thumbnail">
+                    {art.thumbnail ? (
+                      <img
+                        src={art.thumbnail}
+                        alt={art.title}
+                        className="landing__art-image"
+                      />
+                    ) : (
+                      <div className="landing__art-placeholder"></div>
+                    )}
+                  </div>
+                  <div className="landing__art-info">
+                    <h3 className="landing__art-title">{art.title}</h3>
+                    {art.subtitle && <p className="landing__art-subtitle">{art.subtitle}</p>}
+                  </div>
+                </a>
+              ) : (
+                <Link to={art.link} className="landing__art-link">
+                  <div className="landing__art-thumbnail">
+                    {art.thumbnail ? (
+                      <img
+                        src={art.thumbnail}
+                        alt={art.title}
+                        className="landing__art-image"
+                      />
+                    ) : (
+                      <div className="landing__art-placeholder"></div>
+                    )}
+                  </div>
+                  <div className="landing__art-info">
+                    <h3 className="landing__art-title">{art.title}</h3>
+                    {art.subtitle && <p className="landing__art-subtitle">{art.subtitle}</p>}
+                  </div>
+                </Link>
+              )}
             </article>
           ))}
         </div>
