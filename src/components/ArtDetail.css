@@ -1,0 +1,310 @@
+/* Art Detail Page - Shared styles */
+.art-detail {
+  min-height: var(--viewport-height, 100vh);
+  background-color: var(--color-background);
+  padding: var(--spacing-lg) var(--spacing-xl);
+  padding-top: var(--spacing-2xl);
+}
+
+/* Header */
+.art-detail__header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-md) var(--spacing-xl);
+  background-color: var(--color-background);
+}
+
+.art-detail__back-link {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 500;
+  color: #0052A6;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.art-detail__back-link:hover {
+  color: var(--color-primary);
+}
+
+.art-detail__header-contact {
+  display: flex;
+  gap: var(--spacing-xl);
+}
+
+.art-detail__header-contact-link {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--color-text-light);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.art-detail__header-contact-link:hover {
+  color: var(--color-primary);
+}
+
+/* Content */
+.art-detail__content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-top: var(--spacing-xl);
+}
+
+/* Series Section */
+.art-detail__series {
+  margin-bottom: var(--spacing-2xl);
+}
+
+.art-detail__series-title {
+  font-family: var(--font-sans);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #0052A6;
+  margin: 0 0 var(--spacing-lg) 0;
+}
+
+.art-detail__series-description {
+  margin-bottom: var(--spacing-2xl);
+}
+
+.art-detail__series-description p {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-body);
+  font-weight: 400;
+  color: var(--color-text);
+  line-height: 1.6;
+  margin: 0 0 var(--spacing-sm) 0;
+}
+
+/* Artworks */
+.art-detail__artworks {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2xl);
+}
+
+.art-detail__artwork-card {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-lg);
+}
+
+.art-detail__artwork-image-container {
+  flex-shrink: 0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.art-detail__artwork-image {
+  max-width: 300px;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+.art-detail__pdf-wrapper {
+  display: block;
+  width: 300px;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.art-detail__pdf-embed {
+  width: 420px;
+  height: 560px;
+  margin-top: -80px;
+  margin-left: -60px;
+  border: none;
+  pointer-events: none;
+}
+
+.art-detail__artwork-placeholder {
+  width: 300px;
+  height: 400px;
+  background-color: #d9d9d9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+}
+
+.art-detail__coming-soon {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-text-light);
+}
+
+.art-detail__artwork-pdf-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  pointer-events: auto;
+  overflow: hidden;
+}
+
+.art-detail__artwork-pdf {
+  width: 120%;
+  height: 120%;
+  margin: -10%;
+  pointer-events: none;
+  border: none;
+}
+
+.art-detail__artwork-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  pointer-events: none;
+}
+
+.art-detail__artwork-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: var(--spacing-sm);
+}
+
+.art-detail__artwork-title {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-text);
+  margin: 0 0 var(--spacing-xs) 0;
+}
+
+.art-detail__artwork-meaning {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--color-text);
+  margin: 0 0 var(--spacing-sm) 0;
+  line-height: 1.4;
+}
+
+.art-detail__artwork-detail {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--color-text);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.art-detail__artwork-description {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-body);
+  font-weight: 400;
+  color: var(--color-text);
+  line-height: 1.6;
+  margin: 0 0 var(--spacing-lg) 0;
+}
+
+/* Full width artwork (Dashavatharam style) */
+.art-detail__artwork-full {
+  margin-bottom: var(--spacing-2xl);
+}
+
+.art-detail__artwork-info-top {
+  margin-bottom: var(--spacing-md);
+}
+
+.art-detail__artwork-image-full {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 4px;
+  background-color: #d9d9d9;
+}
+
+.art-detail__artwork-image-full .art-detail__artwork-image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.art-detail__artwork-pdf-link-full {
+  display: block;
+  width: 100%;
+}
+
+.art-detail__artwork-pdf-full {
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border: none;
+}
+
+.art-detail__artwork-image-full .art-detail__artwork-image {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+.art-detail__dashavatharam-canvas {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+}
+
+/* Footer */
+.art-detail__footer {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-top: var(--spacing-2xl);
+  padding-bottom: var(--spacing-lg);
+}
+
+.art-detail__footer-line {
+  width: 100%;
+  height: 1px;
+  background-color: #a0a0a0;
+  margin-bottom: var(--spacing-lg);
+}
+
+.art-detail__footer-copyright {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--color-text-light);
+  text-align: center;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .art-detail {
+    padding: var(--spacing-md) var(--spacing-sm);
+    padding-top: calc(var(--spacing-md) + 50px);
+  }
+
+  .art-detail__header {
+    padding: var(--spacing-sm) var(--spacing-sm);
+  }
+
+  .art-detail__series-title {
+    font-size: 1.25rem;
+  }
+
+  .art-detail__artwork-card {
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+
+  .art-detail__artwork-image-container {
+    flex: none;
+    width: 100%;
+  }
+}
