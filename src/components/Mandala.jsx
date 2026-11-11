@@ -26,21 +26,20 @@ function Mandala() {
         <div className="art-detail__series">
           <h1 className="art-detail__series-title">Mandala</h1>
 
-          <div className="art-detail__artworks">
-            <article className="art-detail__artwork-card">
-              <div className="art-detail__artwork-image-container">
-                <img
-                  src={mandala}
-                  alt="Mandala"
-                  className="art-detail__artwork-image"
-                />
-              </div>
-              <div className="art-detail__artwork-info">
-                <h3 className="art-detail__artwork-title">Title: Mandala</h3>
-                <p className="art-detail__artwork-detail">Size: 15 in x 11 in</p>
-                <p className="art-detail__artwork-detail">Acrylic on canvas boards</p>
-              </div>
-            </article>
+          <div className="art-detail__series-description">
+            <p>
+              <strong>Title:</strong> Mandala<br />
+              <strong>Size:</strong> 15 in x 11 in<br />
+              <strong>Medium:</strong> Acrylic on canvas boards
+            </p>
+          </div>
+
+          <div className="art-detail__tanjore-container">
+            <img
+              src={mandala}
+              alt="Mandala"
+              className="art-detail__tanjore-image art-detail__tanjore-image--mandala"
+            />
           </div>
         </div>
       </section>
