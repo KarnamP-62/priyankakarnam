@@ -16,7 +16,7 @@ import cropYieldPic from '../assets/picyeild.png';
 import padathiThumb from '../assets/Padathithumbnail.jpg';
 import pattachitraThumb from '../assets/patachithra.jpg';
 import mandalaThumb from '../assets/Mandalathumbnail.jpg';
-import tanjoreThumb from '../assets/Tanjore.jpg';
+import tanjoreThumb from '../assets/Tanjorethumbnail.png';
 import './Landing.css';
 
 function Landing() {
@@ -50,10 +50,10 @@ function Landing() {
     },
     {
       id: 2,
-      title: 'Pattachitra',
+      title: 'Tanjore',
       subtitle: '',
-      link: '/arts/pattachitra',
-      thumbnail: pattachitraThumb
+      link: '/arts/tanjore',
+      thumbnail: tanjoreThumb
     },
     {
       id: 3,
@@ -64,11 +64,10 @@ function Landing() {
     },
     {
       id: 4,
-      title: 'Tanjore',
+      title: 'Pattachitra',
       subtitle: '',
-      link: null,
-      comingSoon: true,
-      thumbnail: tanjoreThumb
+      link: '/arts/pattachitra',
+      thumbnail: pattachitraThumb
     }
   ];
 

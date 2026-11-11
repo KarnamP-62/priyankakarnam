@@ -11,9 +11,9 @@ function Arts() {
     },
     {
       id: 2,
-      title: 'Pattachitra art series',
+      title: 'Tanjore',
       subtitle: '',
-      link: '/arts/pattachitra'
+      link: '/arts/tanjore'
     },
     {
       id: 3,
@@ -23,10 +23,9 @@ function Arts() {
     },
     {
       id: 4,
-      title: 'Tanjore',
+      title: 'Pattachitra art series',
       subtitle: '',
-      link: null,
-      comingSoon: true
+      link: '/arts/pattachitra'
     }
   ];
 

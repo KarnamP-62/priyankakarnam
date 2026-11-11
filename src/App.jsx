@@ -5,6 +5,7 @@ import Arts from './components/Arts'
 import Padathi from './components/Padathi'
 import Pattachitra from './components/Pattachitra'
 import Mandala from './components/Mandala'
+import Tanjore from './components/Tanjore'
 import ScrollToTop from './components/ScrollToTop'
 import './App.css'
 
@@ -20,6 +21,7 @@ function App() {
           <Route path="/arts/padathi" element={<Padathi />} />
           <Route path="/arts/pattachitra" element={<Pattachitra />} />
           <Route path="/arts/mandala" element={<Mandala />} />
+          <Route path="/arts/tanjore" element={<Tanjore />} />
         </Routes>
       </main>
     </BrowserRouter>

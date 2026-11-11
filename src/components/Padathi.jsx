@@ -1,43 +1,43 @@
 import { Link } from 'react-router-dom';
-import women1Pdf from '../assets/women1.pdf';
-import women2Pdf from '../assets/women2.pdf';
+import women1 from '../assets/women1.jpg';
+import women2 from '../assets/women2.jpg';
+import women3 from '../assets/women3.jpg';
+import women4 from '../assets/women4.jpg';
+import women5 from '../assets/women5.jpg';
+import women6 from '../assets/women6.jpg';
 import './ArtDetail.css';
 
 function Padathi() {
   const artworks = [
     {
-      id: 1,
-      pdf: women1Pdf,
-      title: 'Chandrika',
-      meaning: '(beauty like moon, strong and confident)',
-      size: '9 in x 12 in',
-      medium: 'Acrylic on Canvas'
+      id: 6,
+      image: women6,
+      title: 'Chandrika'
     },
     {
-      id: 2,
-      pdf: women2Pdf,
-      title: 'Charvi',
-      meaning: 'Beautiful and elegant, carrying a quiet, grounded presence',
-      size: '9 in x 12 in',
-      medium: 'Acrylic on Canvas'
-    },
-    {
-      id: 3,
-      image: null,
-      placeholder: true,
-      title: '',
-      meaning: '',
-      size: '9 in x 12 in',
-      medium: 'Acrylic on Canvas'
+      id: 5,
+      image: women5,
+      title: 'Charvi'
     },
     {
       id: 4,
-      image: null,
-      placeholder: true,
-      title: '',
-      meaning: '',
-      size: '9 in x 12 in',
-      medium: 'Acrylic on Canvas'
+      image: women4,
+      title: 'Dhruthi'
+    },
+    {
+      id: 3,
+      image: women3,
+      title: 'Nainika'
+    },
+    {
+      id: 2,
+      image: women2,
+      title: 'Niyati'
+    },
+    {
+      id: 1,
+      image: women1,
+      title: 'Champamala'
     }
   ];
 
@@ -79,33 +79,18 @@ function Padathi() {
             </p>
           </div>
 
-          <div className="art-detail__artworks">
+          <div className="art-detail__artworks art-detail__artworks--grid">
             {artworks.map((artwork) => (
-              <article key={artwork.id} className="art-detail__artwork-card">
+              <div key={artwork.id} className="art-detail__artwork-card--grid">
                 <div className="art-detail__artwork-image-container">
-                  {artwork.placeholder ? (
-                    <div className="art-detail__artwork-placeholder">
-                      <span className="art-detail__coming-soon">Coming Soon</span>
-                    </div>
-                  ) : (
-                    <a href={artwork.pdf} target="_blank" rel="noopener noreferrer" className="art-detail__pdf-wrapper">
-                      <embed
-                        src={`${artwork.pdf}#toolbar=0&navpanes=0&scrollbar=0&view=Fit`}
-                        type="application/pdf"
-                        className="art-detail__pdf-embed"
-                      />
-                    </a>
-                  )}
+                  <img
+                    src={artwork.image}
+                    alt={artwork.title}
+                    className="art-detail__artwork-image"
+                  />
                 </div>
-                <div className="art-detail__artwork-info">
-                  <h3 className="art-detail__artwork-title">
-                    {artwork.title ? `Title: ${artwork.title}` : 'Title:'}
-                  </h3>
-                  <p className="art-detail__artwork-meaning">{artwork.meaning}</p>
-                  <p className="art-detail__artwork-detail">Size: {artwork.size}</p>
-                  <p className="art-detail__artwork-detail">{artwork.medium}</p>
-                </div>
-              </article>
+                <h3 className="art-detail__artwork-title">{artwork.title}</h3>
+              </div>
             ))}
           </div>
         </div>
